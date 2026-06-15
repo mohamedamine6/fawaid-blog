@@ -1,0 +1,85 @@
+.admin-login-body {
+    font-family: 'Cairo', sans-serif;
+    background: radial-gradient(circle at 10% 20%, rgb(242, 247, 245) 0%, rgb(224, 238, 232) 90%);
+    min-height: 100vh;
+}
+
+.admin-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.02) !important;
+}
+
+.admin-icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.8rem;
+}
+
+.input-group-custom {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group-custom .input-icon {
+    position: absolute;
+    right: 15px; /* Aligné à droite car site en RTL */
+    color: #a0aec0;
+    font-size: 1.25rem;
+    z-index: 5;
+    transition: color 0.3s ease;
+}
+
+select {
+    position: absolute;
+    right: 15px; /* Aligné à droite car site en RTL */
+    color: #a0aec0;
+    font-size: 1.25rem;
+    z-index: 5;
+    transition: color 0.3s ease;
+}
+
+.custom-input {
+    padding: 12px 45px 12px 15px !important; /* Espace à droite pour laisser la place à l'icône */
+    border-radius: 8px !important;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* Effet quand l'admin clique dans un champ (Focus) */
+.custom-input:focus {
+    background-color: #ffffff;
+    border-color: #198754; /* Devient vert nature */
+    box-shadow: 0 0 0 4px rgba(25, 135, 84, 0.15);
+    color: #1a202c;
+}
+
+/* L'icône change de couleur quand le champ est actif */
+.input-group-custom .custom-input:focus ~ .input-icon,
+.input-group-custom .custom-input:focus + .input-icon {
+    color: #198754;
+}
+
+/* Bouton de connexion */
+.login-btn {
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(25, 135, 84, 0.2);
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #146c43 !important;
+    box-shadow: 0 6px 16px rgba(25, 135, 84, 0.3);
+    transform: translateY(-1px);
+}
+
+.login-btn:active {
+    transform: translateY(1px);
+}

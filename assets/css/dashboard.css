@@ -1,0 +1,296 @@
+/* Style global du dashboard */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(16, 185, 129, 0.12), transparent 26%),
+        radial-gradient(circle at left center, rgba(59, 130, 246, 0.10), transparent 30%),
+        linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+    color: #334155;
+    min-height: 100vh;
+}
+
+.dashboard-navbar {
+    min-height: 72px;
+    padding-inline: 24px;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1040;
+    backdrop-filter: blur(12px);
+}
+
+.dashboard-navbar-title {
+    line-height: 1.1;
+}
+
+.dashboard-navbar-subtitle {
+    letter-spacing: 0.2px;
+}
+
+.dashboard-navbar-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 0.92rem;
+}
+
+.dashboard-layout {
+    display: flex;
+    align-items: stretch;
+    direction: ltr;
+    min-height: calc(100vh - 72px);
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 28px;
+    direction: rtl;
+}
+
+.dashboard-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 28px;
+    margin-bottom: 24px;
+    border-radius: 24px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #0f172a 0%, #0f766e 100%);
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
+}
+
+.dashboard-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.72rem;
+    opacity: 0.72;
+    font-weight: 700;
+}
+
+.dashboard-title {
+    font-size: clamp(1.6rem, 2vw, 2.4rem);
+    font-weight: 800;
+}
+
+.dashboard-subtitle {
+    max-width: 58ch;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.dashboard-hero-action {
+    border: 0;
+    color: #0f172a;
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.16);
+}
+
+.dashboard-section {
+    margin-bottom: 24px;
+}
+
+.dashboard-stats-grid {
+    margin-bottom: 0;
+}
+
+.dashboard-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.dashboard-section-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.dashboard-table-shell {
+    background: #fff;
+    border-radius: 24px;
+}
+
+.stat-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.06) !important;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: 4px;
+}
+
+.stat-card .card-body {
+    padding: 22px;
+}
+
+.stat-card-icon {
+    width: 52px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    font-size: 1.4rem;
+}
+
+.stat-card-footnote {
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 0.88rem;
+}
+
+.stat-card-posts::before {
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+.stat-card-categories::before {
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+.stat-card-admin::before {
+    background: linear-gradient(90deg, #dc2626, #fb7185);
+}
+
+/* Personnalisation de l'en-tête du tableau */
+.custom-dashboard-table thead th {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e2e8f0;
+    background: #f8fafc;
+    color: #475569;
+}
+
+/* Lignes du tableau */
+.custom-dashboard-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.custom-dashboard-table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+.custom-dashboard-table tbody td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.95rem;
+}
+
+/* Taille fixe et harmonieuse pour les miniatures d'images */
+.table-img-wrapper {
+    width: 60px;
+    height: 45px;
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Boutons d'actions minimalistes et modernes */
+.btn-action {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-action:hover {
+    transform: translateY(-2px);
+}
+
+.dashboard-pagination {
+    padding-top: 18px;
+}
+
+/* Modification des ombres par défaut de Bootstrap */
+.shadow-sm {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.pagination .page-link{
+    color:black;
+}
+
+.pagination .active .page-link{
+    background-color:#198754;
+    border-color:#198754;
+}
+
+@media (max-width: 991.98px) {
+    .dashboard-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .dashboard-hero,
+    .dashboard-table-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .dashboard-navbar {
+        padding-inline: 16px;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+
+    .dashboard-hero {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .dashboard-title {
+        font-size: 1.4rem;
+    }
+}
+
