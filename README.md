@@ -79,7 +79,7 @@ fawaid-blog/
 ### 1. Cloner le projet
 
 ```bash
-git clone https://github.com/votre-compte/fawaid-blog.git
+git clone https://github.com/mohamedamine6/fawaid-blog.git
 ```
 
 ### 2. Copier dans XAMPP
